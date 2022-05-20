@@ -12,6 +12,13 @@ int main(){
     for(int i:a){ // for each loop
         cout<<i<<" ";
     }
+    cout<<endl;
+    //copying a in abc vector
+    vector <int> abc(a);
+     cout<<"ABC is "<<endl;
+    for(int i:abc){ // for each loop
+        cout<<i<<" ";
+    }
     cout<<"Size (current Elements in vector) ==>"<<v.size()<<endl<<"Capacity (total no of elements it can handle currentlt) ==>"<<v.capacity()<<endl ;// prints 0
     v.push_back(10);
     v.push_back(20);  
@@ -51,9 +58,12 @@ int main(){
     return 0;
 }
 
-/**Output 
+/**
+Output : 
 /tmp/1eoBQYALN8.o
 A is 
+1 1 1 1 1 
+ABC is 
 1 1 1 1 1 Size (current Elements in vector) ==>0
 Capacity (total no of elements it can handle currentlt) ==>0
 Capacity2
@@ -72,7 +82,7 @@ Last Element10
 Last Element0
 Last Element33
 Last Element0
-Last Element0
+Last Element1
 Capacity4
 Size (current Elements in vector) ==>18446744073709551613
 
